@@ -8,10 +8,11 @@
             background-color: #facc41;
             width: 150px;
             height: 100px;
-            animation: my-animation 5s;
+            animation: my-animation 6s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             border-radius: 10px;
+            overflow: hidden;
         }
         @keyframes my-animation {
             0%{
@@ -21,20 +22,20 @@
                 transform: rotate(360deg);
             }
             25%{
-                margin-left: 1500px;
+                margin-left: calc(100vw - 160px);
                 margin-top: 0;
                 transform: rotate(0deg);
                 background-color: red;
             }
             50%{
-                margin-left: 1500px;
-                margin-top: 650px;
+                margin-left: calc(100vw - 160px);
+                margin-top: calc(100vh - 110px);
                 transform: rotate(360deg);
                 background-color: green;
             }
             75%{
                 margin-left: 0;
-                margin-top: 650px;
+                margin-top: calc(100vh - 110px);
                 transform: rotate(0deg);
                 background-color: yellow;
             }
