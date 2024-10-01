@@ -24,13 +24,10 @@
             position: absolute;
             display: block;
             z-index: 1;
-            animation: road 5s linear infinite;
+            animation: road 5s ease-in-out infinite;
             background-repeat: repeat-x;
         }
         @keyframes road{
-            0%{
-                transform: translateX(0);
-            }
             100%{
                 transform: translateX(-4000px);
             }
@@ -46,7 +43,7 @@
             display: block;
             z-index: 1;
             background-repeat: repeat-x;
-            animation: city 5s linear infinite;
+            animation: city 5s ease-in-out infinite;
         }
         @keyframes city{
             100%{
@@ -74,15 +71,16 @@
         .Tier>img{
             width: 75px;
             height: 75px;
-            animation: tiar 2s linear infinite;
+            animation: tiar 4.8s ease-in infinite;
         }
         @keyframes tiar{
             0%{
-                transform: rotate(0deg);
-            }
-            100%{
                 transform: rotate(360deg);
             }
+            98%,100%{
+                transform: rotate(-360deg);
+            }
+
         }
         #Back{
             left: -166px;
